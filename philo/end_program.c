@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 13:03:09 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/10 11:30:18 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/13 12:03:36 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void	end_program(t_academy *academy)
 	int		cont;
 	t_philo	*philo;
 
-	printf("Terminar programa\n");
 	cont = 0;
 	philo = academy->list;
 	while (cont < academy->info.num_philos)
@@ -54,5 +53,4 @@ void	end_program(t_academy *academy)
 	pthread_mutex_destroy(&academy->stop);
 	pthread_mutex_destroy(&academy->all_eats);
 	pthread_mutex_destroy(&academy->time);
-	printf("Destruyó todo\n");
 }
