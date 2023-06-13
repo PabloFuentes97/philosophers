@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 13:03:09 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/10 12:15:06 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/13 12:02:44 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,6 @@ void	set_academy(t_academy *academy, int argc, char **argv)
 	academy->list = NULL;
 	set_list(academy);
 	academy->threads = malloc(sizeof(pthread_t) * academy->info.num_philos);
-	academy->threads[academy->info.num_philos] = (pthread_t)0;
 	gettimeofday(&academy->info.time_struct, NULL);
 	academy->info.start_prog_milisec = get_miliseconds(academy->list);
 	pthread_create(&(academy->time_thread), NULL,
